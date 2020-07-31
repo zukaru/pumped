@@ -1,0 +1,27 @@
+@keyframes beat
+{
+  0%
+  {
+    box-shadow: 0 2px 3px var(--color-primary);
+  }
+  8%
+  {
+    box-shadow: 0 2px 6px var(--color-primary-light);
+  }
+  16%
+  {
+    box-shadow: 0 2px 3px var(--color-primary);
+  }
+  24%
+  {
+    box-shadow: 0 2px 6px var(--color-primary-light);
+  }
+  32%
+  {
+    box-shadow: 0 2px 3px var(--color-primary);
+  }
+  40%
+  {
+    box-shadow: 0 2px 3px var(--color-primary);
+  }
+}

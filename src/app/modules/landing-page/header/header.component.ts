@@ -15,8 +15,10 @@ export class HeaderComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.eventSubscription = fromEvent(document, "scroll")
     .subscribe(e => {
-      (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) ? 
+      (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) ?
         this.elOpacity = '1' : this.elOpacity = '0';
+        
+        
   });
   }
 

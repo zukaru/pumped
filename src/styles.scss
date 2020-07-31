@@ -1,15 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import '~src/styles/abstracts/variables';
+@import '~src/styles/abstracts/animations';
+@import '~src/styles/base/reset';
 
 html, body {
     margin: 0;
     padding: 0;
-    background: #3b3b3b;
+    background: var(--color-background);
     -webkit-tap-highlight-color: rgba(0,0,0,0);
     -webkit-tap-highlight-color: transparent;
     font-family: 'Quicksand', sans-serif;
-    color: #ece6e6;
+    color: var(--color-text-light);
     user-select: none;
 
     

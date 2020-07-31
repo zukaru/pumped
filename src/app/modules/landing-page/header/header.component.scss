@@ -1,69 +1,27 @@
 .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    width: 100%;
-    height: 4rem;
-    background: #313131;
-    box-shadow: 0 1px 6px #09dba7;
-    animation: beat 4s infinite;
-    opacity: 0;
-    transition: opacity 0.6s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 4rem;
+  background: var(--color-background);
+  box-shadow: 0 1px 6px var(--color-primary);
+  animation: beat 4s infinite;
+  opacity: 0;
+  transition: opacity 0.6s;
 }
 #brand {
-    position: fixed;
-    height: 2rem;
-    z-index: 5;
-    
-    top: 1.25rem;
-    right: 2rem;
+  position: fixed;
+  height: 1.7rem;
+  z-index: 5;
+  
+  top: 1.25rem;
+  right: 1.5rem;
 }
 #menu {
-    position: fixed;
-    top: 1.75rem;
-    left: 2rem;
-    z-index: 5;
-}
-
-
-@keyframes pulse-logo {
-    5% {transform: scale(1);}
-    10% {transform: scale(1.02);}
-    15% {transform: scale(1);}
-    20% {transform: scale(1.02);}
-    25% {transform: scale(1);}
-}
-
-@keyframes glow-box-shadow {
-    from {box-shadow: 0 2px 3px #09dba7;}
-    to {box-shadow: 0 3px 6px #0ae6af;}
-}
-
-@keyframes beat
-{
-  0%
-  {
-    box-shadow: 0 2px 3px #09dba7;
-  }
-  8%
-  {
-    box-shadow: 0 2px 6px #0ae6af;
-  }
-  16%
-  {
-    box-shadow: 0 2px 3px #09dba7;
-  }
-  24%
-  {
-    box-shadow: 0 2px 6px #0ae6af;
-  }
-  32%
-  {
-    box-shadow: 0 2px 3px #09dba7;
-  }
-  40%
-  {
-    box-shadow: 0 2px 3px #09dba7;
-  }
+  position: fixed;
+  top: 1.75rem;
+  left: 2rem;
+  z-index: 5;
 }

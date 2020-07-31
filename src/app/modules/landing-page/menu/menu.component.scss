@@ -11,14 +11,14 @@
 #menuToggle a
 {
   text-decoration: none;
-  color: #ece6e6;
+  color: var(--color-text-light);
   
   transition: color 0.3s ease;
 }
 
 #menuToggle a:hover
 {
-    color: #09dba7;
+    color: var(--color-primary);
 }
 
 
@@ -46,7 +46,7 @@
   height: 2px;
   position: relative;
   
-  background: #ece6e6;
+  background: var(--color-text-light);
   border-radius: 3px;
   
   z-index: 2;
@@ -77,7 +77,7 @@
 {
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -1px);
-  background: #09dba7;
+  background: var(--color-primary);
 }
 
 /*
@@ -106,7 +106,7 @@
   padding: 50px;
   padding-top: 125px;
   
-  background: #1f1e1ed5;
+  background: var(--color-background-dark-trans);
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   /* to stop flickering of text in safari */
@@ -121,6 +121,7 @@
 {
   padding: 10px 0;
   font-size: 22px;
+  margin-bottom: 1.5rem;
 }
 
 #menuToggle input:checked ~ ul

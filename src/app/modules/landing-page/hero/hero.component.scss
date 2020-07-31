@@ -4,7 +4,10 @@
     position: relative;
     width: 100%;
     height: 90vh;
-    background:  linear-gradient(to right, #254b416b, #254b416b), url(../../../../assets/images/brand/woman-doing-squat.jpg);
+    background:  linear-gradient(to right,
+        var(--color-primary-dark-trans),
+        var(--color-primary-dark-trans)), 
+        url(../../../../assets/images/brand/woman-doing-squat.jpg);
     background-size: 100%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -21,7 +24,12 @@
         font-weight: 500;
         letter-spacing: 4px;
         text-align: center;
-        text-shadow: 1px 1px 5px black;
+        text-shadow: 1px 1px 5px var(--color-shadow-dark);
+
+        &__tagline {
+            font-size: 1.5rem ;
+            margin-top: 3rem;
+        }
     }
    
 }
@@ -34,6 +42,10 @@
         &__msg {
             position: absolute;
             font-size: 3rem;
+
+            &__tagline {
+                font-size: 1rem ;
+            }
         }
     }
 }

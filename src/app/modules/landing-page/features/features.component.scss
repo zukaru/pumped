@@ -1,9 +1,9 @@
 .features {
     width: 100%;
-    color: lightgray;
+    color: var(--color-text-light);
     height: 10rem;
-    background-color: #585858;
+    background-color: var(--color-background-light);
     font-size: 2rem;
-    padding-top: 10rem;
+    padding: 20rem 0 10rem 0;
     text-align: center;
 }
