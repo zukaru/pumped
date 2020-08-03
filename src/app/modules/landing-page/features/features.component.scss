@@ -9,7 +9,15 @@
     font-size: 2rem;
     padding: 20rem 0 10rem 0;
 
-    &__header {margin-bottom: 10rem;}
+    &__header {
+        margin-bottom: 10rem;
+        padding: 2rem;
+        border-left-style: solid;
+        border-image-slice: 0 0 0 1;
+        border-left-width: 10px;
+
+        border-image-source: linear-gradient(to bottom, var(--color-primary-light), var(--color-primary-dark-trans));
+    }
     &__item {
         
         width: 65%;
@@ -32,6 +40,8 @@
         &__header {
             font-size: 1.5rem;
             margin: 2.5rem 0 1rem 0;
+
+            
         }
         &__txt {
             font-size: 1rem;
@@ -44,25 +54,29 @@
 
 }
 
-@media (max-width: 650px) {
+@media (max-width: 950px) {
     .features {
         &__item {
             font-size: 0.8rem;
             width: 85%;
+            max-width: 325px;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-items: center;
             text-align: center;
             &__img {
+                max-width: 325px;
+                min-width: 175px;
                 float: none;
-                margin-bottom: 5rem;
-                clip-path: none;
-                -webkit-clip-path: none;
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+                -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
                 shape-outside: none;
                 -webkit-shape-outside: none;
-                border-radius: 50%;
 
+            }
+            &__txt {
+                margin-left: 0;
             }
         }
     }
