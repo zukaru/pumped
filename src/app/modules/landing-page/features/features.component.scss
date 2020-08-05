@@ -5,14 +5,16 @@
     align-items: center;
     width: 100%;
     color: var(--color-text-light);
-    background-color: var(--color-background-light);
+    background: var(--color-background-light);
     font-size: 2rem;
-    padding: 20rem 0 10rem 0;
+    padding-bottom: 10rem;
+    padding-top: 10rem;
 
     &__header {
-        
-        margin-bottom: 10rem;
-        padding: 2rem;
+        margin-top: 5rem;
+        font-size: 2rem;
+        margin-bottom: 15rem;
+        padding: 4rem 2rem 4rem 2rem;
         border-left-style: solid;
         border-image-slice: 0 0 0 1;
         border-left-width: 10px;
@@ -20,8 +22,8 @@
         border-image-source: linear-gradient(to bottom, var(--color-primary-light), var(--color-primary-dark-trans));
     }
     &__item {
-        opacity: 0;
-        transform: translateY(2.2rem);
+        // opacity: 0;
+        // transform: translateY(2.2rem);
         
         width: 65%;
         margin-bottom: 8rem;
@@ -73,7 +75,6 @@
             &__img {
                 border-radius: 3px 3px 0 0;
                 max-width: 325px;
-                min-width: 175px;
                 float: none;
                 clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
                 -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);

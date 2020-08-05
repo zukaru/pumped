@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { fromEvent, Subscription } from 'rxjs';
+import { fromEvent, Subscription, interval } from 'rxjs';
 
 @Component({
   selector: 'app-header',
@@ -13,7 +13,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
   constructor() { }
 
   ngOnInit(): void {
-    this.eventSubscription = fromEvent(document, "scroll")
+    this.eventSubscription = fromEvent(document, "scroll", {passive: true})
     .subscribe(e => {
       (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) ?
         this.elOpacity = '1' : this.elOpacity = '0';

@@ -15,22 +15,22 @@ export class FeaturesComponent implements OnInit {
   @ViewChild('itemTwo') elTwo: ElementRef;
   @ViewChild('itemThree') elThree: ElementRef;
 
-  @HostListener('window:resize', ['$event'])
-    onResize() {
-    this.innerWidth = window.innerWidth;
-}
+//   @HostListener('window:resize', ['$event'])
+//     onResize() {
+//     this.innerWidth = window.innerWidth;
+// }
 
   constructor(private renderer: Renderer2) { }
 
   ngOnInit(): void {
     this.innerWidth = window.innerWidth;
-    this.eventSubscription = fromEvent(document, "scroll")
-    .pipe(throttleTime(100))
-    .subscribe(e => {
-      this.animateOnScroll(this.elOne);
-      this.animateOnScroll(this.elTwo);
-      this.animateOnScroll(this.elThree);
-    })
+    // this.eventSubscription = fromEvent(document, "scroll", {passive: true})
+    // .pipe(throttleTime(200))
+    // .subscribe(e => {
+    //   this.animateOnScroll(this.elOne);
+    //   this.animateOnScroll(this.elTwo);
+    //   this.animateOnScroll(this.elThree);
+    // })
   }
 
   animateOnScroll(el: ElementRef) {

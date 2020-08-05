@@ -1,0 +1,40 @@
+.testimonials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 10rem;
+    width: 100%;
+
+    background: linear-gradient(
+        to right,
+        var(--color-shadow-dark-trans),
+        var(--color-shadow-dark-trans)),
+        url(../../../../assets/images/brand/man-pushing-weights.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    will-change: scroll-position;
+    &__header {
+        margin-top: -1.5rem;
+        font-size: 2rem;
+        margin-bottom: 100vh;
+
+        padding: 4rem 2rem 4rem 2rem;
+        border-left-style: solid;
+        border-image-slice: 0 0 0 1;
+        border-left-width: 10px;
+
+        border-image-source: linear-gradient(to bottom, var(--color-primary-light), var(--color-primary-dark-trans));
+    }
+    &__txt {
+        font-size: 2rem;
+        margin-left: 2rem;
+        margin-right: 1rem;
+        letter-spacing: 3px;
+        line-height: 4rem;
+        
+
+        &:not(:last-child) {
+            margin-bottom: 100vh;
+        }
+    }
+}
