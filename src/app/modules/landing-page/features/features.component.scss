@@ -22,15 +22,16 @@
         border-image-source: linear-gradient(to bottom, var(--color-primary-light), var(--color-primary-dark-trans));
     }
     &__item {
-        // opacity: 0;
-        // transform: translateY(2.2rem);
+        opacity: 0;
+        transform: translateY(2.2rem);
         
         width: 65%;
-        margin-bottom: 8rem;
+        margin-bottom: 15rem;
         border-radius: 3px;
         
         background: var(--color-background);
         box-shadow: 2px 4px 10px var(--color-shadow-dark);
+        transition: opacity 0.5s ease-in;
         
 
         &__img {

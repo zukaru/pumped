@@ -1,0 +1,31 @@
+.cta {
+    padding-bottom: 10rem;
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        var(--color-background),
+        var(--color-background-light)
+    );
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    &__header {
+        margin-top: -3rem;
+        font-size: 2rem;
+        margin-bottom: 15rem;
+        padding: 4rem 2rem 4rem 2rem;
+        border-left-style: solid;
+        border-image-slice: 0 0 0 1;
+        border-left-width: 10px;
+
+        border-image-source: linear-gradient(to bottom, var(--color-primary-light), var(--color-primary-dark-trans));
+    }
+    &__countdown {
+        font-family: monospace;
+        font-size: 2rem;
+        margin-bottom: 5rem;
+    }
+}
