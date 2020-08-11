@@ -45,3 +45,9 @@
     animation: fadeIn 1s ease-in-out reverse forwards;
   }
 }
+
+@keyframes gradBgAnim {
+  0%{background-position:0% 4%}
+  50%{background-position:100% 97%}
+  100%{background-position:0% 4%}
+}
