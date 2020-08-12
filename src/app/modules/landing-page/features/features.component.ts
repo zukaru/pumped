@@ -37,17 +37,17 @@ export class FeaturesComponent implements OnInit {
     let introPosition = el.nativeElement.getBoundingClientRect().top;
 
     if(this.innerWidth > 800) {
-      if(introPosition < this.innerWidth / 2) {
+      if(introPosition < this.innerWidth * 0.4) {
         this.renderer.setStyle(el.nativeElement, 'opacity', 1);
-        this.renderer.setStyle(el.nativeElement, 'transform', 'translateX(0)');
-      } else if(introPosition > this.innerWidth / 2) {
+        this.renderer.setStyle(el.nativeElement, 'transform', 'scale(1)');
+      } else if(introPosition > this.innerWidth * 0.4) {
         
         this.renderer.removeStyle(el.nativeElement, 'opacity');
         this.renderer.removeStyle(el.nativeElement, 'transform');
       }
     } else if(introPosition < this.innerWidth + 200) {
       this.renderer.setStyle(el.nativeElement, 'opacity', 1);
-      this.renderer.setStyle(el.nativeElement, 'transform', 'translateX(0)');
+      this.renderer.setStyle(el.nativeElement, 'transform', 'scale(1)');
     } else if(introPosition > this.innerWidth + 200) {
       this.renderer.removeStyle(el.nativeElement, 'opacity');
       this.renderer.removeStyle(el.nativeElement, 'transform');

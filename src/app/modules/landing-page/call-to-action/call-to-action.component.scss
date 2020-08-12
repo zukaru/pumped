@@ -1,6 +1,12 @@
 .cta {
     clip-path: polygon(0 4%, 100% 0, 100% 100%, 0% 100%);
-    background: linear-gradient(323deg, var(--color-secondary-dark), var(--color-primary-Vdark));
+    background: linear-gradient(
+        323deg,
+        var(--color-secondary-dark),
+        var(--color-secondary-dark-trans),
+        var(--color-primary-Vdark),
+        var(--color-primary-Vdark-trans),
+        );
     background-size: 200% 200%;
 
     animation: gradBgAnim 15s ease infinite;
