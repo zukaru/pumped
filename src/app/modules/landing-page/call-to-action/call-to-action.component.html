@@ -4,7 +4,12 @@
         June 21, 2021
     </h3>
     <h3 class="cta__countdown">
-        {{this.days}} : {{this.hours}} : {{this.minutes}} : {{this.seconds}}
+        {{this.days}}D | {{this.hours}}H | {{this.minutes}}M
     </h3>
+
+    <h3 class="cta__countdown--seconds">
+        {{digitFill}}{{this.seconds}}
+    </h3>
+    
 
 </section>

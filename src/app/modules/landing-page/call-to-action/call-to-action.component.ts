@@ -16,6 +16,7 @@ export class CallToActionComponent implements OnInit {
    hours: number;
    minutes: number;
    seconds: number;
+   digitFill: number | string;
 
   
 
@@ -35,6 +36,7 @@ export class CallToActionComponent implements OnInit {
     this.hours = Math.floor((distance % this._day) / this._hour);
     this.minutes = Math.floor((distance % this._hour) / this._minute);
     this.seconds = Math.floor((distance % this._minute) / this._second);
+    this.seconds < 10 ? this.digitFill = 0 : this.digitFill = '';
   }
 
 }

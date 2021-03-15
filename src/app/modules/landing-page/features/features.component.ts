@@ -9,7 +9,7 @@ import { throttleTime } from 'rxjs/operators';
 })
 export class FeaturesComponent implements OnInit {
   eventSubscription: Subscription
-  public innerWidth: number;
+  public innerHeight: number;
 
   @ViewChild('itemOne') elOne: ElementRef;
   @ViewChild('itemTwo') elTwo: ElementRef;
@@ -17,15 +17,15 @@ export class FeaturesComponent implements OnInit {
 
   @HostListener('window:resize', ['$event'])
     onResize() {
-    this.innerWidth = window.innerWidth;
+    this.innerHeight = window.innerWidth;
 }
 
   constructor(private renderer: Renderer2) { }
 
   ngOnInit(): void {
-    this.innerWidth = window.innerWidth;
+    this.innerHeight = window.innerHeight;
     this.eventSubscription = fromEvent(document, "scroll", {passive: true})
-    .pipe(throttleTime(200))
+    .pipe(throttleTime(100))
     .subscribe(e => {
       this.animateOnScroll(this.elOne);
       this.animateOnScroll(this.elTwo);
@@ -36,19 +36,21 @@ export class FeaturesComponent implements OnInit {
   animateOnScroll(el: ElementRef) {
     let introPosition = el.nativeElement.getBoundingClientRect().top;
 
-    if(this.innerWidth > 800) {
-      if(introPosition < this.innerWidth * 0.4) {
+    
+
+    if(this.innerHeight > 800) {
+      if(introPosition < this.innerHeight) {
         this.renderer.setStyle(el.nativeElement, 'opacity', 1);
-        this.renderer.setStyle(el.nativeElement, 'transform', 'scale(1)');
-      } else if(introPosition > this.innerWidth * 0.4) {
+        this.renderer.setStyle(el.nativeElement, 'transform', 'scale(1) translateY(0)');
+      } else if(introPosition > this.innerHeight - 200) {
         
         this.renderer.removeStyle(el.nativeElement, 'opacity');
-        this.renderer.removeStyle(el.nativeElement, 'transform');
+        this.renderer.removeStyle(el.nativeElement, 'transform',);
       }
-    } else if(introPosition < this.innerWidth + 200) {
+    } else if(introPosition < this.innerHeight + 200) {
       this.renderer.setStyle(el.nativeElement, 'opacity', 1);
-      this.renderer.setStyle(el.nativeElement, 'transform', 'scale(1)');
-    } else if(introPosition > this.innerWidth + 200) {
+      this.renderer.setStyle(el.nativeElement, 'transform', 'scale(1) translateY(0)');
+    } else if(introPosition > this.innerHeight + 200) {
       this.renderer.removeStyle(el.nativeElement, 'opacity');
       this.renderer.removeStyle(el.nativeElement, 'transform');
     }
